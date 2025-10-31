@@ -23,8 +23,8 @@ cd cross-chain-bridge
 # Open workspace in VS Code
 code cross-chain-bridge.code-workspace
 ```
-
 ## 📁 Project Structure
+```
 cross-chain-bridge/
 ├── solana-bridge/          # Solana programs (Rust/Anchor)
 │   ├── programs/
@@ -39,6 +39,7 @@ cross-chain-bridge/
 │   └── test/              # Unit & integration tests
 ├── docs/                   # Documentation
 └── scripts/                # Utility scripts
+```
 
 ## 🛠️ Development Commands
 

@@ -1,0 +1,25 @@
+[package]
+name = "bridge"
+version = "0.1.0"
+description = "Cross-chain bridge gateway"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "bridge"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+borsh = "0.10.3"
+amm = { path = "../amm", features = ["cpi"] }
+
+[dev-dependencies]
+solana-program-test = "~1.17"

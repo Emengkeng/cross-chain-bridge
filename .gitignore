@@ -1,0 +1,35 @@
+# Solana/Rust
+target/
+**/*.rs.bk
+Cargo.lock
+.anchor/
+
+# Ethereum/Node
+node_modules/
+artifacts/
+cache/
+coverage/
+typechain-types/
+*.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test
+.nyc_output/
+coverage.json

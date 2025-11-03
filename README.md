@@ -1,6 +1,6 @@
 # Cross-Chain Liquidity Bridge
 
-A liquidity-based cross-chain bridge connecting Ethereum and Solana with minimal slippage using StableSwap AMM.
+A liquidity-based cross-chain bridge connecting Ethereum and Solana with minimal slippage using StableSwap AMM. Read about the Architecture Plan [Here](docs/LiquidityPoolBridgeArchitecturePlan.pdf) 
 
 ## 🚀 Quick Start
 

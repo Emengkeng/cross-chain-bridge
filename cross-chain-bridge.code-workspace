@@ -9,6 +9,10 @@
       "path": "ethereum-bridge"
     },
     {
+      "name": "Bridge Client",
+      "path": "client"
+    },
+    {
       "name": "📚 Documentation",
       "path": "docs"
     }

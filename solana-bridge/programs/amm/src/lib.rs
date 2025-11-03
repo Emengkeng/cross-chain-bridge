@@ -7,7 +7,7 @@ pub mod errors;
 
 use instructions::*;
 
-declare_id!("11111111111111111111111111111111"); // Placeholder
+declare_id!("11111111111111111111111111111111");
 
 #[program]
 pub mod amm {

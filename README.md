@@ -14,7 +14,7 @@ A liquidity-based cross-chain bridge connecting Ethereum and Solana with minimal
 ### Setup
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Emengkeng/cross-chain-bridge
 cd cross-chain-bridge
 
 # Run setup script

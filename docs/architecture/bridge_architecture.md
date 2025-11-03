@@ -2,7 +2,7 @@
 ## Technical Architecture & Development Guide
 
 **Version:** 1.0  
-**Last Updated:** 2025-10-30  
+**Last Updated:** 2025-11-03  
 **Team Size:** Multiple Developers  
 **Tech Stack:** Solana (Rust/Anchor), Ethereum (Solidity), Wormhole
 
@@ -118,7 +118,7 @@ solana-bridge/
 │   │   │   └── errors.rs            # Error codes
 │   │   └── Cargo.toml
 │   │
-│   └── bridge/                       # Cross-chain (Owner: Dev C)
+│   └── bridge/                       # Cross-chain (Owner: Dev B)
 │       ├── src/
 │       │   ├── lib.rs
 │       │   ├── instructions/
@@ -147,7 +147,7 @@ ethereum-bridge/
 ├── contracts/
 │   ├── core/                         # Core contracts
 │   │   ├── LiquidityPool.sol        # AMM pool (Owner: Dev A)
-│   │   ├── BridgeGateway.sol        # Cross-chain (Owner: Dev C)
+│   │   ├── BridgeGateway.sol        # Cross-chain (Owner: Dev B)
 │   │   └── StableSwapMath.sol       # Math library (Owner: Dev B)
 │   │
 │   ├── interfaces/                   # Contract interfaces
@@ -204,12 +204,12 @@ ethereum-bridge/
 
 | Task | Owner | Dependencies | Output |
 |------|-------|--------------|--------|
-| Wormhole SDK setup | Dev C | None | Dependencies |
-| Message encoding spec | Dev C | None | Spec document |
-| Solana VAA verification | Dev C | Wormhole SDK | `verification/` |
-| EVM message emission | Dev C | Wormhole SDK | `BridgeGateway.sol` |
-| Deposit flow | Dev C | AMM + Messaging | End-to-end deposit |
-| Withdrawal flow | Dev C | AMM + Messaging | End-to-end withdrawal |
+| Wormhole SDK setup | Dev B | None | Dependencies |
+| Message encoding spec | Dev B | None | Spec document |
+| Solana VAA verification | Dev B | Wormhole SDK | `verification/` |
+| EVM message emission | Dev B | Wormhole SDK | `BridgeGateway.sol` |
+| Deposit flow | Dev B | AMM + Messaging | End-to-end deposit |
+| Withdrawal flow | Dev B | AMM + Messaging | End-to-end withdrawal |
 
 **Milestone:** Can send test message from ETH → Solana (no value yet)
 
@@ -235,9 +235,9 @@ ethereum-bridge/
 |------|-------|--------------|--------|
 | Unit test coverage | All | All modules | 90%+ coverage |
 | Integration tests | All | All modules | Test suite |
-| Fuzz testing | Dev B | Math modules | Security report |
-| Gas optimization | Dev A | EVM contracts | Optimized code |
-| Security audit prep | Dev C | All | Audit package |
+| Fuzz testing | Dev A | Math modules | Security report |
+| Gas optimization | Dev B | EVM contracts | Optimized code |
+| Security audit prep | Dev B | All | Audit package |
 
 ---
 
@@ -479,10 +479,10 @@ npx hardhat test --grep "test-vectors"
 |-----------|-------|-----------|----------|
 | Math unit tests | Dev B | Every commit | `math/*.rs`, `StableSwap.test.ts` |
 | AMM unit tests | Dev A | Every commit | `instructions/*.rs`, `LiquidityPool.test.ts` |
-| Bridge unit tests | Dev C | Every commit | `verification/*.rs`, `BridgeGateway.test.ts` |
+| Bridge unit tests | Dev A,B | Every commit | `verification/*.rs`, `BridgeGateway.test.ts` |
 | Cross-chain math | Dev B | Daily | `tests/cross_verify.ts` |
 | Integration tests | All | Before PR | `tests/*.ts` |
-| E2E tests | Dev C | Before release | `tests/e2e/` |
+| E2E tests | Dev B | Before release | `tests/e2e/` |
 
 ### 7.3 Required Test Coverage
 

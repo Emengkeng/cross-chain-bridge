@@ -89,7 +89,7 @@ npm run deploy:goerli
 
 - Dev A: AMM Specialist
 - Dev B: Math Engine
-- Dev C: Bridge & Security
+- Dev B: Bridge & Security
 
 ## 📄 License
 

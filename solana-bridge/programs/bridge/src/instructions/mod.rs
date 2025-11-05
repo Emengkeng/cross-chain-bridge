@@ -1,7 +1,7 @@
-pub mod init_bridge;
+pub mod initialize;
 pub mod deposit;
 pub mod withdraw;
 
-pub use init_bridge::*;
+pub use initialize::*;
 pub use deposit::*;
 pub use withdraw::*;

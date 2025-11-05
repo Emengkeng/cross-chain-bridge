@@ -13,7 +13,7 @@ pub mod bridge {
     use super::*;
 
     pub fn initialize_bridge(ctx: Context<InitializeBridge>) -> Result<()> {
-        instructions::init_bridge::handler(ctx)
+        instructions::initialize::handler(ctx)
     }
 
     pub fn deposit(

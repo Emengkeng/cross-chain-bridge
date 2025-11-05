@@ -28,7 +28,6 @@ code cross-chain-bridge.code-workspace
 cross-chain-bridge/
 ├── solana-bridge/          # Solana programs (Rust/Anchor)
 │   ├── programs/
-│   │   ├── amm/           # Liquidity pool & swaps
 │   │   └── bridge/        # Cross-chain gateway
 │   └── tests/             # Integration tests
 ├── ethereum-bridge/        # Ethereum contracts (Solidity)
